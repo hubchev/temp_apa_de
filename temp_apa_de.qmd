@@ -1,0 +1,77 @@
+---
+title: "Titel der Hausarbeit XXX"
+subtitle: "Hausarbeit im Modul XXX"
+gutachter: "Prof. Dr. XXX XXX"
+
+date: 07/13/2024
+date-format: "DD.MM.YYYY"
+place: "Köln"
+
+author:
+  - name: "XXX XXX (Matr. Nr.: XXX)"
+    corresponding: false
+    affiliations:
+      city: Los Angeles
+      region: CA
+semester-eins: "XXX. Fachsemester"
+author-zwei: ""
+semester-zwei: ""
+author-drei: ""
+semester-drei: ""
+bibliography: literatur.bib
+format:
+  apaquarto-pdf:
+    documentmode: stu
+toc: true
+floatsintext: true
+number-sections: true
+a4paper: true
+fontsize: 12pt
+lang: de
+language: 
+  citation-last-author-separator: "und"
+  figure-table-note: "Anmerkung"
+  section-title-abstract: "Zusammenfassung"
+  section-title-appendix: "Anhang"
+  section-title-references: "Literaturverzeichnis"
+---
+
+
+
+# Zusammenfassung {-}
+
+Diese Vorlage wurde von Prof. Dr. Stephan Huber angefertigt.  Sie baut auf Quarto extension `apaquarto` auf [@Schneider2024quarto]. 
+
+\newpage
+# Einleitung
+
+Text
+
+# Theoretischer Hintergrund
+
+Text
+
+## Unter-Abschnitt XXX
+
+Text
+
+## Unter-Abschnitt XXX
+
+Text
+
+# Methode
+
+# Ergebnis
+
+# Diskussion
+
+\newpage
+# Literaturverzeichnis {-}
+
+::: {#refs}
+:::
+
+\appendix 
+
+
+# Erster Anhang

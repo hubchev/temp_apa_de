@@ -22,19 +22,15 @@ semester-drei: ""
 bibliography: literatur.bib
 format:
   apaquarto-pdf:
-    documentmode: man
-toc: true
+    documentmode: stu
 floatsintext: true
 fig-pos: 't'
 number-sections: true
 a4paper: true
 fontsize: 12pt
+indent-skip-first: false
+indent-skip-all: false
 lang: de
-language: 
-  citation-last-author-separator: "und"
-  section-title-abstract: "Zusammenfassung"
-  section-title-appendix: "Anhang"
-  section-title-references: "Literaturverzeichnis"
 ---
   
   
@@ -43,9 +39,9 @@ language:
 Diese Vorlage wurde von Prof. Dr. Stephan Huber angefertigt.  Sie baut auf Quarto extension `apaquarto` auf [@Schneider2024quarto]. 
 
 \newpage
+\thispagestyle{empty}
+\tableofcontents
 
-
-# Einführung
 
 # Einführung
 
@@ -61,10 +57,6 @@ In den folgenden Abschnitten zeige ich Ihnen ein wenig, wie Sie Quarto verwenden
 Die Formatierung der Überschriften regelt APA strikt, siehe:
 [https://apastyle.apa.org/style-grammar-guidelines/paper-format/headings](https://apastyle.apa.org/style-grammar-guidelines/paper-format/headings) 
 
-# Dies ist ein Kapiteltitel
-
-Dies ist Text.
-
 ## Dies ist ein Abschnitt
 
 Dies ist Text.
@@ -73,7 +65,9 @@ Dies ist Text.
 
 Dies ist Text.
 
-# Bilddateien einbinden {#sec-bildladen}
+# Bilder
+
+## Bilddateien einbinden {#sec-bildladen}
 
 In @fig-logo sehen Sie das Logo der Universität. In @fig-logo2 wird das Logo kleiner dargestellt und mit einer anderen Methode eingebunden. Beide Methoden sind jedoch praktisch equivalent. Letzlich bietet das winzige Logo in @fig-logo3 eine weitere Methode, Bilder einzubinden. 
 
@@ -83,7 +77,7 @@ In @fig-logo sehen Sie das Logo der Universität. In @fig-logo2 wird das Logo kl
   apa-note="Hier steht eine Notiz zum Bild."
   }
 
-::: {#fig-logo2}
+::: {#fig-logo2 fig-align="left"}
 ![](logo.png){width=30%}
 
 _Anmerkung._ Hier steht auch eine Notiz zum Bild.
@@ -101,7 +95,7 @@ Ein mittelgroßes Logo.
 knitr::include_graphics("logo.png")
 ```
 
-# Mit R erzeugte Grafiken einbinden
+## Mit R erzeugte Grafiken einbinden
 
 In @fig-plotcar wird ein Scatterplot veranschaulicht welcher direkt in R erzeugt wurde. Das hat den Vorteil, dass die Datenerzeugung und Veranschaulichung direkt in Quarto geschieht. Die Daten sind also immer aktuell, Änderungen können direkt hier vorgenommen werden, die Arbeit ist komplett transparent und replizierbar. Darüber hinaus erspart man sich das Abspeichern und Exportieren der Grafik. 
 
@@ -116,6 +110,8 @@ In @fig-plotcar wird ein Scatterplot veranschaulicht welcher direkt in R erzeugt
 
 plot(cars)
 ```
+
+
 
 
 # Literatur einarbeiten
@@ -148,7 +144,7 @@ Jeder Literatureintrag ist ähnlich strukturiert. Zuerst kommt die Angabe, um we
 
 Eine BibTeX-Datei kann schnell unübersichtlich werden. Ich empfehle daher die Verwendung eines Literaturverwaltungsprogramms wie JabRef, siehe: [www.jabref.org](www.jabref.org). Das Programm ist kostenlos und funktioniert auf allen Ihren Geräten und mit allen Betriebssystemen. Insbesondere kann es BibTeX-Dateien gut handhaben. Sie fragen sich vielleicht, was eine BibTeX-Datei ist. Installieren Sie  JabRef und öffnen Sie die Datei `bibliography.bib` dieser Vorlage, dann werden Sie verstehen, was ich meine.
 
-## APA {#sec-apa}
+## APA und CSL {#sec-apa}
 
 Der vordefinierte Bibliographiestil dieser Vorlage ist APA in der 7. Auflage. Sie können dies ändern. Hierzu einfach im (YAML) Header dieser Vorlage den den entpsrechenden Stil angeben. Dies geschieht durch eine Datei mit der Endung `csl` was für "Citation Style Language" steht. In dieser Datei sind die Zitierregeln ausgeführt so dass sie der Computer umsetzen kann. Auf [https://www.zotero.org/styles](https://www.zotero.org/styles) finden Sie eine Vielzahl an Stilen. Wenn Sie beispielsweise APA in der 6. Auflage verwenden wollen, gebe sie im Header folgendes an:
 
@@ -158,7 +154,7 @@ csl: "https://www.zotero.org/styles/apa-6th-edition"
 
 ## Literatur zitieren {#sec-cite}
 
-In wissenschaftlichen Texten werden oft andere Arbeiten zitiert. Dies kann auf unterschiedlichste Weise geschehen. @tbl-letters zeigt, wie zitiert werden kann. Dort sehen sie dass 
+In wissenschaftlichen Texten werden oft andere Arbeiten zitiert. Dies kann auf unterschiedlichste Weise geschehen. @tbl-letters zeigt, wie zitiert werden kann. 
 
 | Code | So erscheint es im Text |
 |------------------------------|------------------------------------|
@@ -172,32 +168,30 @@ In wissenschaftlichen Texten werden oft andere Arbeiten zitiert. Dies kann auf u
 : So kann Literatur zitiert werden {#tbl-letters}
 
 
-
 Hyperlinks kann man auch setzen: `[Google](www.google.de)` wird zu: [Google](www.google.de).
 Bei akademischen Arbeiten sollten Quellen immer in das Literaturverzeichnis und Hyperlinks funktionieren nicht in gedruckter Form. Hier ein Beispiel: [Google](www.google.de) ist eine beliebte Online-Suchmaschine [siehe @Google2023Google]. 
 
 
+\subsection{Verschiedene Formate}
+	
+Hier sind einige fiktive Beispiele für verschiedene Arten von Literatur:
+@unpublished,
+@techreport,
+@phdthesis,
+@misc,
+@mastersthesis,
+@incollection,
+@inbook,
+@conference,
+@booklet,
+@book,
+@article,
+@proceedings,
+@webpage.
 
-## Abschnitte setzen und Text formatieren
 
-### Das ist Unterabschnitt
+Die entsprechende bibtex-Datei sollte die Einträge enthalten. Sie werden angezeigt in @sec-bibtexdatei.
 
-Ein Abschnitt sollte nicht alleine kommen, daher...
-
-### Der zweite Unterabschnitt
-
-Hier gehört ihr Text.
-
-
-# Text formatieren
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
 
 
 # Tabellen
@@ -243,6 +237,7 @@ descriptives <- mixed_data |>
 #| tbl-cap: Ein Tabelle mit deskriptiver Statistik
 #| ft.align: left
 #| apa-note: Eine Notiz.
+
 library(tidyverse)
 library(flextable)
 
@@ -250,6 +245,28 @@ descriptives |>
   flextable() |>  
   theme_apa() 
 ```
+
+
+## Abschnitte setzen und Text formatieren
+
+### Das ist Unterabschnitt
+
+Ein Abschnitt sollte nicht alleine kommen, daher...
+
+### Der zweite Unterabschnitt
+
+Hier gehört ihr Text.
+
+
+# Text formatieren
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
 
 
 
@@ -309,7 +326,7 @@ Doppelter Fußnotenverweis[^zweite].
 ::: {#refs}
 :::
 
-
+\newpage
 \appendix
 
 # Eine erster Anhang
@@ -318,6 +335,7 @@ Hier steht Text und @fig-logo4.
 
 ![Logo der CFH.](logo.png){
   #fig-logo4
+  fig-pos="h"
   width="2in" 
   apa-note="Das ist das Logo der CFH."
   }
@@ -328,13 +346,154 @@ Hier steht Text und @fig-logo5.
 
 ![Schon wieder das Logo.](logo.png){
   #fig-logo5
+  fig-pos="h"
   width="2in" 
   apa-note="Das ist das Logo der CFH."
   }
   
+# BibTex Datei {#sec-bibtexdatei}
 
-\appendix 
-  
-  
-# Erster Anhang
-  
+
+```{verbatim}
+	@Unpublished{unpublished,
+		author = {Andy Unpublished},
+		title  = {The title of the work},
+		month  = {7},
+		year   = {1993},
+	}
+	
+	@TechReport{techreport,
+		author      = {Peter WorkingPaper},
+		title       = {The title of the work},
+		institution = {The institution that published},
+		year        = {1993},
+		number      = {2},
+		address     = {The address of the publisher},
+		month       = {7},
+	}
+	
+	@PhdThesis{phdthesis,
+		author  = {Andreas PHD},
+		title   = {The title of the work},
+		school  = {The school of the thesis},
+		year    = {2011},
+		address = {The address of the publisher},
+		month   = {7},
+	}
+	
+	@Misc{misc,
+		author       = {Alexandra Misc},
+		title        = {The title of the work},
+		howpublished = {How it was published},
+		month        = {4},
+		year         = {1993},
+	}
+	
+	@MastersThesis{mastersthesis,
+		author  = {Alex Masterthesis},
+		title   = {The title of the work},
+		school  = {The school of the thesis},
+		year    = {2004},
+		address = {The address of the publisher},
+		month   = {10},
+	}
+	
+	@InCollection{incollection,
+		author    = {Eli Editor},
+		title     = {The title of the work},
+		booktitle = {The title of the book},
+		publisher = {The name of the publisher},
+		year      = {2022},
+		editor    = {The editor},
+		volume    = {4},
+		series    = {2},
+		chapter   = {8},
+		pages     = {101-114},
+		address   = {The address of the publisher},
+		edition   = {3},
+		month     = {7},
+	}
+	
+	@InBook{inbook,
+		chapter   = {8},
+		pages     = {201-213},
+		title     = {The title of the work},
+		publisher = {The name of the publisher},
+		year      = {1993},
+		author    = {Suzy Inbook},
+		volume    = {4},
+		series    = {5},
+		address   = {The address of the publisher},
+		edition   = {3},
+		month     = {7},
+	}
+	
+	@Conference{conference,
+		author       = {David Conference},
+		title        = {The title of the work},
+		booktitle    = {The title of the book},
+		year         = {1986},
+		editor       = {The editor},
+		volume       = {4},
+		series       = {5},
+		pages        = {213},
+		address      = {The address of the publisher},
+		month        = {7},
+		organization = {The organization},
+		publisher    = {The publisher},
+	}
+	
+	@Booklet{booklet,
+		title        = {The title of the work},
+		author       = {Betty Booklet},
+		howpublished = {How it was published},
+		address      = {The address of the publisher},
+		month        = {7},
+		year         = {1996},
+	}
+	
+	@Book{book,
+		title     = {The title of the work},
+		publisher = {The name of the publisher},
+		year      = {2023},
+		author    = {Debbie Book},
+		volume    = {4},
+		series    = {10},
+		address   = {The address},
+		edition   = {3},
+		month     = {7},
+		isbn      = {3257442892},
+	}
+	
+	@Article{article,
+		author  = {Sepp Article},
+		title   = {The title of the work},
+		journal = {The name of the journal},
+		year    = {2011},
+		volume  = {4},
+		number  = {2},
+		pages   = {201-213},
+		month   = {7},
+	}
+	
+	@Proceedings{proceedings,
+		title        = {The title of the work},
+		year         = {1993},
+		editor       = {Luc Proceedings},
+		volume       = {4},
+		series       = {5},
+		address      = {The address of the publisher},
+		publisher    = {The name of the publisher},
+		month        = {7},
+		organization = {The organization},
+	}
+	
+	@Misc{webpage,
+		author = {Author Website},
+		title  = {Website Title},
+		year   = {2023},
+		note   = {Accessed on April 14, 2023},
+		url    = {http://website-url.com},
+	}
+
+```

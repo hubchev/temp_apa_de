@@ -61,6 +61,24 @@ $if(numbered-lines)$
 \linenumbers
 $endif$
 
+$if(indent-skip-first)$
+\makeatletter
+\b@level@one@skip=-2.5ex plus -1ex minus -.2ex
+\b@level@two@skip=-2.5ex plus -1ex minus -.2ex
+\makeatother
+\setlength\parindent{1cm}
+\setlength\parskip{0cm}
+$else$
+$if(indent-skip-all)$
+\setlength\parindent{0cm}
+\setlength\parskip{0cm}
+$else$
+\setlength\parindent{1cm}
+\setlength\parskip{0cm}
+$endif$
+$endif$
+
+
 $if(linestretch)$
 \setstretch{$linestretch$}
 $endif$
@@ -234,21 +252,16 @@ Studienort: $place$  \par
   $endfor$%
   \clearpage
 }
-\makeatletter
-\b@level@one@skip=-2.5ex plus -1ex minus -.2ex
-\b@level@two@skip=-2.5ex plus -1ex minus -.2ex
-\makeatother
-\setlength\parindent{1cm}
-\setlength\parskip{0cm}
+
 $endif$
 
 
 $if(toc)$
-\hypertarget{toc}{}
-\thispagestyle{empty}
-\tableofcontents
-\newpage
-\section[Introduction]{$title$}
+% \hypertarget{toc}{}
+% \thispagestyle{empty}
+% \tableofcontents
+% \newpage
+% \section[Introduction]{$title$}
 $else$
 $if(suppress-title-page)$
 $if(suppress-title-introduction)$

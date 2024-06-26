@@ -19,6 +19,7 @@ semester-zwei: ""
 author-drei: ""
 semester-drei: ""
 bibliography: literatur.bib
+# csl: "https://www.zotero.org/styles/deutsche-gesellschaft-fur-psychologie"
 format:
   apaquarto-pdf:
     documentmode: stu
@@ -36,16 +37,24 @@ language:
   section-title-references: "Literaturverzeichnis"
 ---
 
+# Zusammenfassung {.unnumbered}
 
-
-# Zusammenfassung {-}
-
-Diese Vorlage wurde von Prof. Dr. Stephan Huber angefertigt.  Sie baut auf Quarto extension `apaquarto` auf [@Schneider2024quarto]. 
+Diese Vorlage wurde von Prof. Dr. Stephan **Huber** angefertigt. Sie baut auf Quarto extension `apaquarto` auf [@Schneider2024quarto].
 
 \newpage
+
+
 # Einleitung
 
-Text
+sdgfkshglj *sgfsdg* sgsg sdgsd[^1].
+
+[^1]: Hierwer
+
+sdfs sfESFD[@DerlingJoséMendozaVelazco2023].
+
+-   sdg
+-   **sgfs**
+-   woireire
 
 # Theoretischer Hintergrund
 
@@ -66,12 +75,17 @@ Text
 # Diskussion
 
 \newpage
-# Literaturverzeichnis {-}
+
+# Literaturverzeichnis {.unnumbered}
 
 ::: {#refs}
 :::
 
-\appendix 
+\appendix
 
 
-# Erster Anhang
+## Anhang A: Text
+
+## Anhang B: Text
+
+

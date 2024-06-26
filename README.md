@@ -1,87 +1,84 @@
-# Exam Template Using R Markdown
+# Deutsche Vorlage entsprechend der APA 7 Richtlinien
 
-This repo contains a customizable R Markdown exam template.
+Dieses Repository enthält eine Vorlage welche es ermöglicht einen Text entsprechend der APA 7 Richtlinien mit Quarto zu erstellen
 
-# Downloading the Repo
+# Herunterladen des Repos
 
-## Method 1: Using R
+## Methode 1: Verwendung von R
 
-### Method 1 a): `usethis::use_course()`
+### Methode 1 a): usethis::use_course()
 
-Install and load the `usethis` package and download with `use_course`:
+Installieren und laden Sie das usethis-Paket und laden Sie es mit use_course herunter:
 
-```{r}
+´´´{r}
 # install.packages("usethis")
 library("usethis")
-usethis::use_course("hubchev/temp_exam", destdir = getwd())
-```
+usethis::use_course("hubchev/temp_apa_de", destdir = getwd())
+´´´
 
-By default it downloads the repo into a directory and stores it in your working directory. Feel free to replace `getwd()` with `"path/to/destination"`, i.w., the desired location on your system where you want to download the repo.
+Standardmäßig wird das Repository in ein Verzeichnis heruntergeladen und in Ihrem Arbeitsverzeichnis gespeichert. Ersetzen Sie getwd() gerne durch "pfad/zum/ziel", d.h. den gewünschten Speicherort auf Ihrem System, an dem Sie das Repository herunterladen möchten.
 
-### Method 1 b): `quarto_use_template()`
+### Methode 1 b): quarto_use_template()
 
-Install the [quarto package](https://quarto-dev.github.io/quarto-r/) (version = 1.4 or higher). The quarto package is not Quarto itself, but it provides
-convenient functions to interact with Quarto and R Markdown.
+Installieren Sie das quarto-Paket (Version = 1.4 oder höher). Das quarto-Paket ist nicht Quarto selbst, aber es bietet praktische Funktionen zur Interaktion mit Quarto und Quarto.
 
-If the quarto package is not installed, you can can install it by
-running this code in the console:
+Wenn das quarto-Paket nicht installiert ist, können Sie es installieren, indem Sie diesen Code in der Konsole ausführen:
 
-``` r
+´´´{r}
 install.packages("quarto")
-```
+´´´
 
-Once the quarto package is installed, you can copy the template by setting your working directory to the directory where you want the template to be installed (e.g., `setwd("path/to/my/folder")`). Make sure that the directory is empty and run this command:
+Sobald das quarto-Paket installiert ist, können Sie die Vorlage kopieren, indem Sie Ihr Arbeitsverzeichnis auf das Verzeichnis setzen, in dem Sie die Vorlage installieren möchten (z.B. setwd("pfad/zu/meinem/ordner")). Stellen Sie sicher, dass das Verzeichnis leer ist und führen Sie diesen Befehl aus:
 
-```{r}
-quarto::quarto_use_template("hubchev/temp_exam")
-```
+´´´{r}
+quarto::quarto_use_template("hubchev/temp_apa_de")
+´´´
 
-A prompt will ask if you trust the author (me) not to run malicious
-code. To proceed, answer `Yes` or just `Y`.
+Eine Eingabeaufforderung fragt, ob Sie dem Autor (mir) vertrauen, keinen schädlichen Code auszuführen. Um fortzufahren, antworten Sie mit Ja oder einfach J.
 
+## Methode 2: Verwendung von Git
 
-## Method 2: Using the Git
+Wenn Sie Git auf Ihrem System installiert haben, können Sie dieses Repository mithilfe der Befehlszeile herunterladen:
 
-If you have Git installed on your system, you can download this repository using the command line:
+- Öffnen Sie das Terminal in R Studio (In RStudio befindet sich das Terminal in einer Registerkarte neben der Konsole.) oder das Eingabeaufforderungsfenster Ihres Betriebssystems.
+-  Navigieren Sie zu dem Verzeichnis, in das Sie das Repository herunterladen möchten, mithilfe des cd-Befehls (z.B. cd ~/Dokumente).
+-   Führen Sie den folgenden Befehl aus, um das Repository zu klonen:
 
-- Open the _Terminal_ in R Studio (In RStudio, the terminal is in a tab next to the console.) or the _Command Prompt_ of your OS.
-- Navigate to the directory where you want to download the repo using the cd command (e.g., cd ~/Documents).
-- Run the following command to clone the repo: 
+´´´{bash}
+git clone https://github.com/hubchev/temp_apa_de.git
+´´´
 
-```{git}
-git clone https://github.com/hubchev/temp_exam.git
-``` 
+## Methode 3: Verwendung des Terminals
 
-## Method 3: Using the Terminal
+Verwenden Sie das Terminal (In RStudio befindet sich das Terminal in einer Registerkarte neben der Konsole.), um zu dem Verzeichnis zu navigieren, in das Sie die Vorlage kopieren möchten (z.B. cd pfad/zu/meinem/ordner). Stellen Sie sicher, dass das Verzeichnis leer ist und führen Sie diesen Befehl aus:
 
-Use the _Terminal_ (In RStudio, the terminal is in a tab next to the console.) to navigate to the directory where you want to copy the template (e.g., cd path/to/my/folder). Make sure that the directory is empty and run this command:
+´´´{bash}
+quarto use template hubchev/temp_apa_de
+´´´
 
-```{bash}
-quarto use template hubchev/temp_exam
-```
+## Methode 4: Verwendung der Maus
 
+### Methode 4a: Klicken in GitHub
 
-## Method 4: Using the mouse
+Klicken Sie in GitHub auf die grüne Schaltfläche `<> Code v`; Code v, die Sie in diesem Repository finden. In dem sich öffnenden Kontextmenü finden Sie eine Schaltfläche namens `Download ZIP`. Klicken Sie darauf und Sie haben eine gezippte Kopie des Repos, die Sie entzippen und verwenden können.
 
-### Method 4a: Click in GitHub
+### Methode 4b: Klicken Sie auf [diesen Link](https://github.com/hubchev/temp_apa_de/zipball/HEAD)
 
-In GitHub click the green `<> Code v` button that you find at this repo. In the context menu that opens, you find a button named `Download ZIP`. Click that and you have the a zipped copy of the repo which you can unzip and use.
+Sie können das Repository mithilfe [dieses Link](https://github.com/hubchev/temp_apa_de/zipball/HEAD) in einer gezippten Datei herunterladen. Jetzt können Sie es in ein Verzeichnis Ihrer Wahl entzippen.
 
-### Method 4a: Click this [this link](https://github.com/hubchev/temp_exam/zipball/HEAD)
+# Verwendung der Vorlage
 
-You can download the repo in zipped file using [this link](https://github.com/hubchev/temp_exam/zipball/HEAD). Now, you can unzip it into a directory of your choice.
+Sobald Sie das Repository heruntergeladen haben, navigieren Sie zu dem Verzeichnis, in das Sie es heruntergeladen haben, und öffnen Sie die Datei temp_apa_de.qmd in RStudio oder Ihrem bevorzugten Editor. Passen Sie die Vorlage an, um Ihre eigene Arbeit zu erstellen!
 
-# How to Use the Template
-
-Once you've downloaded the repo, navigate to the directory where you downloaded it and open the `exam_template.Rmd` file in RStudio or your preferred R Markdown editor. Customize the template to create your own exam!
-
-To convert the R Markdown file into a formatted document (such as a PDF or HTML), knit the exam_template.Rmd file. You can do this in RStudio by opening the file and clicking the "Knit" button, or by running the following command in the R console:
+Um die Quarto-Datei in ein formatiertes Dokument (z.B. ein PDF oder HTML umzuwandeln), strangen Sie die exam_template.Rmd-Datei. Sie können dies in RStudio tun, indem Sie die Datei öffnen und auf die Schaltfläche "Stricken" klicken oder indem Sie den folgenden Befehl in der R-Konsole ausführen:
 
 ```{r}
-rmarkdown::render("path/to/temp_exam.Rmd")
+quarto_render("pfad/zu/temp_apa_de.qmd")
 ```
 
-Replace "path/to/exam_template.Rmd" with the actual path to the file.
-Contribute
+Ersetzen Sie "pfad/zu/temp_apa_de.qmd" durch den tatsächlichen Pfad zur Datei.
 
-If you have any questions or need help with the template, feel free to open an issue or contact me. Happy exam-writing!
+
+# Feedback
+
+Wenn Sie Fragen haben oder Hilfe bei der Vorlage benötigen, zögern Sie nicht, via GitHub Änderungen per `pull request` einzuarbeiten oder mich zu kontaktieren. 

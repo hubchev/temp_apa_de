@@ -10,11 +10,11 @@ Dieses Repository enthält eine Vorlage welche es ermöglicht einen Text entspre
 
 Installieren und laden Sie das usethis-Paket und laden Sie es mit use_course herunter:
 
-´´´{r}
+```{r}
 # install.packages("usethis")
 library("usethis")
 usethis::use_course("hubchev/temp_apa_de", destdir = getwd())
-´´´
+```
 
 Standardmäßig wird das Repository in ein Verzeichnis heruntergeladen und in Ihrem Arbeitsverzeichnis gespeichert. Ersetzen Sie getwd() gerne durch "pfad/zum/ziel", d.h. den gewünschten Speicherort auf Ihrem System, an dem Sie das Repository herunterladen möchten.
 
@@ -24,15 +24,15 @@ Installieren Sie das quarto-Paket (Version = 1.4 oder höher). Das quarto-Paket 
 
 Wenn das quarto-Paket nicht installiert ist, können Sie es installieren, indem Sie diesen Code in der Konsole ausführen:
 
-´´´{r}
+```{r}
 install.packages("quarto")
-´´´
+```
 
 Sobald das quarto-Paket installiert ist, können Sie die Vorlage kopieren, indem Sie Ihr Arbeitsverzeichnis auf das Verzeichnis setzen, in dem Sie die Vorlage installieren möchten (z.B. setwd("pfad/zu/meinem/ordner")). Stellen Sie sicher, dass das Verzeichnis leer ist und führen Sie diesen Befehl aus:
 
-´´´{r}
+```{r}
 quarto::quarto_use_template("hubchev/temp_apa_de")
-´´´
+```
 
 Eine Eingabeaufforderung fragt, ob Sie dem Autor (mir) vertrauen, keinen schädlichen Code auszuführen. Um fortzufahren, antworten Sie mit Ja oder einfach J.
 
@@ -44,17 +44,17 @@ Wenn Sie Git auf Ihrem System installiert haben, können Sie dieses Repository m
 -  Navigieren Sie zu dem Verzeichnis, in das Sie das Repository herunterladen möchten, mithilfe des cd-Befehls (z.B. cd ~/Dokumente).
 -   Führen Sie den folgenden Befehl aus, um das Repository zu klonen:
 
-´´´{bash}
+```{bash}
 git clone https://github.com/hubchev/temp_apa_de.git
-´´´
+```
 
 ## Methode 3: Verwendung des Terminals
 
 Verwenden Sie das Terminal (In RStudio befindet sich das Terminal in einer Registerkarte neben der Konsole.), um zu dem Verzeichnis zu navigieren, in das Sie die Vorlage kopieren möchten (z.B. cd pfad/zu/meinem/ordner). Stellen Sie sicher, dass das Verzeichnis leer ist und führen Sie diesen Befehl aus:
 
-´´´{bash}
+```{bash}
 quarto use template hubchev/temp_apa_de
-´´´
+```
 
 ## Methode 4: Verwendung der Maus
 

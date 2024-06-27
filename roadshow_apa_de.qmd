@@ -1,20 +1,20 @@
 ---
-title: "Titel der Hausarbeit XXX"
-subtitle: "Hausarbeit im Modul XXX"
-shorttitle: "Der Laufende Titel"
-gutachter: "Prof. Dr. XXX XXX"
+title: "Beispielhafte Verwendung der Quarto Vorlage"
+title-secondline: ""
+subtitle: "Roadshow:"
+shorttitle: "Quarto Vorlage"
 
-date: 07/13/2024
-date-format: "DD.MM.YYYY"
-place: "Köln"
+university: "Charlotte Fresenius Hochschule"
+studiengang: "Studiengang: Psychologie (B. Sc.)"
+place: "Studienort: Köln"
 
 author:
-  - name: "XXX XXX (Matr. Nr.: XXX)"
+  - name: "Prof. Dr. Stephan huber"
     corresponding: false
     affiliations:
-      city: Los Angeles
-      region: CA
-semester-eins: "XXX. Fachsemester"
+      city: Köln
+      region: NRW
+semester-eins: ""
 author-zwei: ""
 semester-zwei: ""
 author-drei: ""
@@ -36,6 +36,7 @@ lang: de
   
 # Zusammenfassung {-}
 
+\noindent 
 Diese Vorlage wurde von Prof. Dr. Stephan Huber angefertigt.  Sie baut auf Quarto extension `apaquarto` auf [@Schneider2024quarto]. 
 
 \newpage
@@ -329,7 +330,7 @@ Doppelter Fußnotenverweis[^zweite].
 \newpage
 \appendix
 
-# Eine erster Anhang
+# Eine erster Anhang 
 
 Hier steht Text und @fig-logo4.
 
@@ -339,8 +340,9 @@ Hier steht Text und @fig-logo4.
   width="2in" 
   apa-note="Das ist das Logo der CFH."
   }
-  
-# Eine zweiter Anhang
+
+\newpage
+# Eine zweiter Anhang 
 
 Hier steht Text und @fig-logo5.
 
@@ -350,7 +352,8 @@ Hier steht Text und @fig-logo5.
   width="2in" 
   apa-note="Das ist das Logo der CFH."
   }
-  
+
+\newpage
 # BibTex Datei {#sec-bibtexdatei}
 
 

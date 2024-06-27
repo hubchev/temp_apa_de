@@ -48,7 +48,7 @@ contributes:
         email: "Email"
         figure-table-note: "Anmerkung"
         section-title-abstract: "Abstract"
-        section-title-appendix: "Appedix"
+        section-title-appendix: "Appendix"
         section-title-references: "References"
         title-block-author-note: "Author Note"
         title-block-correspondence-note: "Correspondence concerning this article should be addressed to"

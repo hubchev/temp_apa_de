@@ -43,7 +43,7 @@ Diese Vorlage wurde von Prof. Dr. Stephan Huber angefertigt.  Sie baut auf Quart
 \thispagestyle{empty}
 \tableofcontents
 
-
+\newpage
 # Einführung
 
 Dies ist eine Vorlage. Sie können sie verwenden, um Ihre studentische Arbeit mit Quarto zu schreiben. Die Formatierung folgt den Richtlinien, die in @ConciseGuideAPA2020 festgelegt wurden. Diese Vorlage wurde von mir, Prof. Dr. Stephan Huber^[Email: `stephan.huber@hs-fresenius.de`], verfasst. Es sei erwähnt, dass ich die Quarto Extension `apaquarto` von @Schneider2024quarto so angepasst habe, dass die Vorlage den Anforderungen der Charlotte Fresenius Universität entsprechen. Insbesondere die Titelseite wurde den Vorgaben entsprechend erstellt. Falls Sie Verbesserungsvorschläge haben, lassen Sie es mich bitte wissen. Wenn Sie Hilfe bei Quarto benötigen, können Sie gerne während meiner Sprechstunde vorbeikommen. 

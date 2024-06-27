@@ -29,7 +29,6 @@ format:
   apaquarto-pdf:
     documentmode: stu
 toc: true
-keep-tex: true
 floatsintext: true
 number-sections: false
 a4paper: true

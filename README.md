@@ -6,19 +6,7 @@ Dieses Repository enthält eine Vorlage welche es ermöglicht einen Text entspre
 
 ## Methode 1: Verwendung von R
 
-### Methode 1 a): usethis::use_course()
-
-Installieren und laden Sie das usethis-Paket und laden Sie es mit use_course herunter:
-
-```{r}
-# install.packages("usethis")
-library("usethis")
-usethis::use_course("hubchev/temp_apa_de", destdir = getwd())
-```
-
-Standardmäßig wird das Repository in ein Verzeichnis heruntergeladen und in Ihrem Arbeitsverzeichnis gespeichert. Ersetzen Sie getwd() gerne durch "pfad/zum/ziel", d.h. den gewünschten Speicherort auf Ihrem System, an dem Sie das Repository herunterladen möchten.
-
-### Methode 1 b): quarto_use_template()
+### Methode 1 a): quarto_use_template()
 
 Installieren Sie das quarto-Paket (Version = 1.4 oder höher). Das quarto-Paket ist nicht Quarto selbst, aber es bietet praktische Funktionen zur Interaktion mit Quarto und Quarto.
 
@@ -35,6 +23,20 @@ quarto::quarto_use_template("hubchev/temp_apa_de")
 ```
 
 Eine Eingabeaufforderung fragt, ob Sie dem Autor (mir) vertrauen, keinen schädlichen Code auszuführen. Um fortzufahren, antworten Sie mit Ja oder einfach J.
+
+
+### Methode 1 b): usethis::use_course()
+
+Installieren und laden Sie das usethis-Paket und laden Sie es mit use_course herunter:
+
+```{r}
+# install.packages("usethis")
+library("usethis")
+usethis::use_course("hubchev/temp_apa_de", destdir = getwd())
+```
+
+Standardmäßig wird das Repository in ein Verzeichnis heruntergeladen und in Ihrem Arbeitsverzeichnis gespeichert. Ersetzen Sie getwd() gerne durch "pfad/zum/ziel", d.h. den gewünschten Speicherort auf Ihrem System, an dem Sie das Repository herunterladen möchten.
+
 
 ## Methode 2: Verwendung von Git
 

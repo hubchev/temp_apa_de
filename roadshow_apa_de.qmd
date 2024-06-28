@@ -31,7 +31,6 @@ fontsize: 12pt
 indent-skip-first: false
 indent-skip-all: false
 lang: de
-keep-tex: true
 ---
   
   

@@ -34,6 +34,8 @@ number-sections: false
 a4paper: true
 fontsize: 12pt
 lang: de
+
+# Das Logo lässt sich verändern und austauschen. Siehe Zeile 255 der Datei  _extensions/hubchev/apaquarto/apatemplate.tex
 ---
 
 # Zusammenfassung {.unnumbered}
